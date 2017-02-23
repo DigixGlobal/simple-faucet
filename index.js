@@ -37,7 +37,7 @@ const limiter = new RateLimit({
 app.use(limiter);
 
 app.get('/faucet/:address', (req, res) => {
-  const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+  const ip = req.headers['X-Real-IP'] || req.headers['x-forwarded-for'] || req.connection.remoteAddress;
   const { address } = req.params;
   console.log(`---\n${new Date()} ${ip} /faucet/${address}`);
   try {
