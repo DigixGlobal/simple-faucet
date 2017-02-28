@@ -4,7 +4,8 @@
   "description": "Simple http value faucet",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start-server": "testrpc -p 6545 --secure --account='0xe07bb36099d7f056fcda53a4870d6fa9ac4b56b1c2db640b073729092a509167,999999999999999999999999999999999'",
+    "start": "node index.js -h http://localhost:6545 -k e07bb36099d7f056fcda53a4870d6fa9ac4b56b1c2db640b073729092a509167"
   },
   "author": "Chris Hitchcott <hitchcott@gmail.com> (http://hitchcott.com)",
   "license": "BSD-3-Clause",
